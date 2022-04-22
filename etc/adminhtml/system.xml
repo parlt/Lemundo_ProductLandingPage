@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+<system>
+    <tab id="lemundo" translate="label" sortOrder="10">
+        <label>Lemundo</label>
+    </tab>
+    <section id="lemundo_product_landing_page" translate="label" sortOrder="250" showInDefault="1" showInWebsite="1" showInStore="1">
+        <class>separator-top</class>
+        <label>Lemundo Product Landing Page</label>
+        <tab>lemundo</tab>
+        <resource>Lemundo_ProductLandingPage::productlandingpage_config</resource>
+        <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>General</label>
+            <field id="default_pagesize" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                <label><![CDATA[Max number of products per page]]></label>
+                <comment><![CDATA[Default: 10]]></comment>
+            </field>
+            <field id="default_sortfield" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                <label><![CDATA[Sort by product field default]]></label>
+                <comment><![CDATA[Default: sku]]></comment>
+            </field>
+            <field id="default_sortorder" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label><![CDATA[Sort order default]]></label>
+                <comment><![CDATA[Default: ASC]]></comment>
+                <source_model>Lemundo\ProductLandingPage\Model\Config\Source\SortList</source_model>
+            </field>
+        </group>
+    </section>
+</system>
+</config>

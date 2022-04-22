@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!-- getProductDetailBySku -->
+    <route url="/V1/productlandingpage/productdetailbysku/:sku" method="GET">
+        <service class="Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface" method="getProductDetailBySku"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/productlandingpage/productdetailbysku/:sku/:storeId" method="GET">
+        <service class="Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface" method="getProductDetailBySku"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <!-- getProductsByCategoryId -->
+    <route url="/V1/productlandingpage/productsbycategoryid/:categoryId" method="GET">
+        <service class="Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface" method="getProductsByCategoryId"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/productlandingpage/productsbycategoryid/:categoryId/:storeId" method="GET">
+        <service class="Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface" method="getProductsByCategoryId"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/productlandingpage/productsbycategoryid/:categoryId/:storeId/:sortField" method="GET">
+        <service class="Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface" method="getProductsByCategoryId"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/productlandingpage/productsbycategoryid/:categoryId/:storeId/:sortField/:sortOrder" method="GET">
+        <service class="Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface" method="getProductsByCategoryId"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/productlandingpage/productsbycategoryid/:categoryId/:storeId/:sortField/:sortOrder/:pageSize/:currentPage" method="GET">
+        <service class="Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface" method="getProductsByCategoryId"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <!-- getProductsByUrlPath -->
+    <route url="/V1/productlandingpage/productsbyurlpath/:urlPath" method="GET">
+        <service class="Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface" method="getProductsByUrlPath"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/productlandingpage/productsbyurlpath/:urlPath/:storeId" method="GET">
+        <service class="Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface" method="getProductsByUrlPath"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/productlandingpage/productsbyurlpath/:urlPath/:storeId/:sortField" method="GET">
+        <service class="Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface" method="getProductsByUrlPath"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/productlandingpage/productsbyurlpath/:urlPath/:storeId/:sortField/:sortOrder" method="GET">
+        <service class="Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface" method="getProductsByUrlPath"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/productlandingpage/productsbyurlpath/:urlPath/:storeId/:sortField/:sortOrder/:pageSize/:currentPage" method="GET">
+        <service class="Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface" method="getProductsByUrlPath"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <!-- getProducts -->
+    <route url="/V1/productlandingpage/products" method="GET">
+        <service class="Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface" method="getProducts"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/productlandingpage/products/:storeId" method="GET">
+        <service class="Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface" method="getProducts"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/productlandingpage/products/:storeId/:sortField" method="GET">
+        <service class="Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface" method="getProducts"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/productlandingpage/products/:storeId/:sortField/:sortOrder" method="GET">
+        <service class="Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface" method="getProducts"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/productlandingpage/products/:storeId/:sortField/:sortOrder/:pageSize/:currentPage" method="GET">
+        <service class="Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface" method="getProducts"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+</routes>

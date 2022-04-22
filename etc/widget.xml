@@ -1,0 +1,16 @@
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="lemundo_product_landing_page" class="Lemundo\ProductLandingPage\Block\Widget\ProductLandingPageWidgetBlock" placeholder_image="Magento_Widget::placeholder.gif">
+        <label translate="true">Lemundo Product Landing Page</label>
+        <description translate="true">Show landingpage products</description>
+        <parameters>
+            <parameter name="template" xsi:type="select" required="true" visible="true">
+                <label translate="true">Template</label>
+                <options>
+                    <option name="default" value="widget/listproducts.phtml" selected="true">
+                        <label translate="true">List Products</label>
+                    </option>
+                </options>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

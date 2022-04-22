@@ -1,0 +1,529 @@
+{
+	"info": {
+		"_postman_id": "bd71f3b2-6cbf-4bce-9076-de7fd392d84e",
+		"name": "Lemundo Productlandingpage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getProducts",
+			"item": [
+				{
+					"name": "getProducts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer ypjby4nalbcwe5j01p3k5usw2eikb0lt"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"cartItem\": { \"quote_id\": \"5211a523e937710097fb37b1ad4e95f5\", \"sku\": \"Pandora Swoke\", \"qty\": 3 } }"
+						},
+						"url": {
+							"raw": "{{shopDomain}}/rest/V1/productlandingpage/products",
+							"host": [
+								"{{shopDomain}}"
+							],
+							"path": [
+								"rest",
+								"V1",
+								"productlandingpage",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProducts Params: storeId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer ypjby4nalbcwe5j01p3k5usw2eikb0lt"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"cartItem\": { \"quote_id\": \"5211a523e937710097fb37b1ad4e95f5\", \"sku\": \"Pandora Swoke\", \"qty\": 3 } }"
+						},
+						"url": {
+							"raw": "{{shopDomain}}/rest/V1/productlandingpage/products/{{storeId}}",
+							"host": [
+								"{{shopDomain}}"
+							],
+							"path": [
+								"rest",
+								"V1",
+								"productlandingpage",
+								"products",
+								"{{storeId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProducts Params: storeId, sortField, sortOrder, pageSize, currentPage",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer ypjby4nalbcwe5j01p3k5usw2eikb0lt"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"cartItem\": { \"quote_id\": \"5211a523e937710097fb37b1ad4e95f5\", \"sku\": \"Pandora Swoke\", \"qty\": 3 } }"
+						},
+						"url": {
+							"raw": "{{shopDomain}}/rest/V1/productlandingpage/products/{{storeId}}/{{sortField}}/{{sortOrder}}/{{pageSize}}/{{currentPage}}",
+							"host": [
+								"{{shopDomain}}"
+							],
+							"path": [
+								"rest",
+								"V1",
+								"productlandingpage",
+								"products",
+								"{{storeId}}",
+								"{{sortField}}",
+								"{{sortOrder}}",
+								"{{pageSize}}",
+								"{{currentPage}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "getProductsByUrlPath",
+			"item": [
+				{
+					"name": "getProductsByUrlPath Params: urlPath",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer ypjby4nalbcwe5j01p3k5usw2eikb0lt"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"cartItem\": { \"quote_id\": \"5211a523e937710097fb37b1ad4e95f5\", \"sku\": \"Pandora Swoke\", \"qty\": 3 } }"
+						},
+						"url": {
+							"raw": "{{shopDomain}}/rest/V1/productlandingpage/productsbyurlpath/{{urlPath}}",
+							"host": [
+								"{{shopDomain}}"
+							],
+							"path": [
+								"rest",
+								"V1",
+								"productlandingpage",
+								"productsbyurlpath",
+								"{{urlPath}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductsByUrlPath Params: urlPath, storeId, sortField, sortOrder, pageSize, currentPage",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer ypjby4nalbcwe5j01p3k5usw2eikb0lt"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"cartItem\": { \"quote_id\": \"5211a523e937710097fb37b1ad4e95f5\", \"sku\": \"Pandora Swoke\", \"qty\": 3 } }"
+						},
+						"url": {
+							"raw": "{{shopDomain}}/rest/V1/productlandingpage/productsbyurlpath/{{urlPath}}/{{storeId}}/{{sortField}}/{{sortOrder}}/{{pageSize}}/{{currentPage}}",
+							"host": [
+								"{{shopDomain}}"
+							],
+							"path": [
+								"rest",
+								"V1",
+								"productlandingpage",
+								"productsbyurlpath",
+								"{{urlPath}}",
+								"{{storeId}}",
+								"{{sortField}}",
+								"{{sortOrder}}",
+								"{{pageSize}}",
+								"{{currentPage}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "getProductsByCategoryId",
+			"item": [
+				{
+					"name": "getProductsByCategoryId Params: categoryId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer ypjby4nalbcwe5j01p3k5usw2eikb0lt"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"cartItem\": { \"quote_id\": \"5211a523e937710097fb37b1ad4e95f5\", \"sku\": \"Pandora Swoke\", \"qty\": 3 } }"
+						},
+						"url": {
+							"raw": "{{shopDomain}}/rest/V1/productlandingpage/productsbycategoryid/{{categoryId}}",
+							"host": [
+								"{{shopDomain}}"
+							],
+							"path": [
+								"rest",
+								"V1",
+								"productlandingpage",
+								"productsbycategoryid",
+								"{{categoryId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductsByCategoryId Params: categoryId, storeId, sortField, sortOrder, pageSize, currentPage",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer ypjby4nalbcwe5j01p3k5usw2eikb0lt"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"cartItem\": { \"quote_id\": \"5211a523e937710097fb37b1ad4e95f5\", \"sku\": \"Pandora Swoke\", \"qty\": 3 } }"
+						},
+						"url": {
+							"raw": "{{shopDomain}}/rest/V1/productlandingpage/productsbycategoryid/{{categoryId}}/{{storeId}}/{{sortField}}/{{sortOrder}}/{{pageSize}}/{{currentPage}}",
+							"host": [
+								"{{shopDomain}}"
+							],
+							"path": [
+								"rest",
+								"V1",
+								"productlandingpage",
+								"productsbycategoryid",
+								"{{categoryId}}",
+								"{{storeId}}",
+								"{{sortField}}",
+								"{{sortOrder}}",
+								"{{pageSize}}",
+								"{{currentPage}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "getProductDetailBySku",
+			"item": [
+				{
+					"name": "getProductDetailBySku Params: sku",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer ypjby4nalbcwe5j01p3k5usw2eikb0lt"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"cartItem\": { \"quote_id\": \"5211a523e937710097fb37b1ad4e95f5\", \"sku\": \"Pandora Swoke\", \"qty\": 3 } }"
+						},
+						"url": {
+							"raw": "{{shopDomain}}/rest/V1/productlandingpage/productdetailbysku/{{sku}}",
+							"host": [
+								"{{shopDomain}}"
+							],
+							"path": [
+								"rest",
+								"V1",
+								"productlandingpage",
+								"productdetailbysku",
+								"{{sku}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductDetailBySku Params: sku, storeId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer ypjby4nalbcwe5j01p3k5usw2eikb0lt"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"cartItem\": { \"quote_id\": \"5211a523e937710097fb37b1ad4e95f5\", \"sku\": \"Pandora Swoke\", \"qty\": 3 } }"
+						},
+						"url": {
+							"raw": "{{shopDomain}}/rest/V1/productlandingpage/productdetailbysku/{{sku}}/{{storeId}}",
+							"host": [
+								"{{shopDomain}}"
+							],
+							"path": [
+								"rest",
+								"V1",
+								"productlandingpage",
+								"productdetailbysku",
+								"{{sku}}",
+								"{{storeId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "shopDomain",
+			"value": "https://app.magento.test/",
+			"type": "string"
+		},
+		{
+			"key": "storeId",
+			"value": "0",
+			"type": "string"
+		},
+		{
+			"key": "sortField",
+			"value": "name",
+			"type": "string"
+		},
+		{
+			"key": "sortOrder",
+			"value": "ASC",
+			"type": "string"
+		},
+		{
+			"key": "pageSize",
+			"value": "100",
+			"type": "string"
+		},
+		{
+			"key": "currentPage",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "categoryId",
+			"value": "22",
+			"type": "string"
+		},
+		{
+			"key": "urlKey",
+			"value": "200-l-tiponer-ultrapoint-pipettenspitzen-gelb-graduiert-nachfullsystem",
+			"type": "string"
+		},
+		{
+			"key": "sku",
+			"value": "S1111-3800",
+			"type": "string"
+		},
+		{
+			"key": "urlPath",
+			"value": "200-l-xl-filterpipettenspitze-konisch.html",
+			"type": "string"
+		}
+	]
+}

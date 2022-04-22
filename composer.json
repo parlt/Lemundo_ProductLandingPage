@@ -1,0 +1,22 @@
+{
+    "name": "lemundo/module-product-landing-page",
+    "description": "product landing page",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Pierre Arlt",
+            "email": "info@pierrearlt.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Lemundo\\ProductLandingPage\\": ""
+        }
+    }
+}

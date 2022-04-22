@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Lemundo\ProductLandingPage\Block\Widget\ProductLandingPageWidgetBlock">
+        <plugin name="assign_view_model" type="Lemundo\ProductLandingPage\Plugin\Block\Widget\ProductLandingPageWidgetPlugin"/>
+    </type>
+</config>

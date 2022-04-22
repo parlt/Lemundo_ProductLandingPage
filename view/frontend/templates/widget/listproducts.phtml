@@ -1,0 +1,103 @@
+<?php
+use Lemundo\ProductLandingPage\Block\Widget\ProductLandingPageWidgetBlock;
+use Lemundo\ProductLandingPage\ViewModel\ProductLandingPageWidgetViewModel;
+use Magento\Catalog\Api\Data\ProductInterface;
+use Magento\Catalog\Model\Product;
+
+/** @var ProductLandingPageWidgetBlock $block */
+/** @var ProductLandingPageWidgetViewModel $viewModel */
+
+$products = $viewModel->getProductList();
+
+ if (!empty($products)) { ?>
+<div class="block widget block-landingpage-products grid">
+    <div id="landingpage-module">
+        <div class="lp-content">
+            <div class="products-grid grid">
+                <ol class="product-items">
+                    <?php
+                    $iterator = 1;
+                    $iteratorTotal = $viewModel->getMaxProducts();
+
+                    /** @var ProductInterface| Product $product */
+                    foreach ($products as $product) {
+                        if (!$product) {
+                            continue;
+                        }
+                        ?>
+                        <?php echo ($iterator++ == 1) ? '<li class="product-item">' : '</li><li class="product-item">' ?>
+                        <div class="product-item-info">
+                            <?php
+                            $imageUrl = $viewModel->getProductImageUrl($product);
+                            ?>
+                            <a href="<?php echo $product->getProductUrl() ?>" class="product-item-photo">
+                                <img src="<?php echo $imageUrl; ?>" alt="<?php echo $this->escapeHtml($product->getName()) ?>"/>
+                            </a>
+                            <div class="product-item-details">
+                            <span class="product-item-name">
+                                <a title="<?php echo $viewModel->getEscaper()->escapeHtml($product->getName()); ?>"
+                                   href="<?php echo $product->getProductUrl() ?>"
+                                   class="product-item-link">
+                                    <?php echo $viewModel->getEscaper()->escapeHtml($product->getName()) ?>
+
+                                </a>
+                            </span>
+                                <span>
+                                     Sku: <?php echo $viewModel->getEscaper()->escapeHtml($product->getSku()) ?>
+                                </span>
+                                <span><?php echo $block->getProductPriceHtml($product); ?> </span>
+                                <div class="product-item-actions" style="margin-top: 10px">
+                                    <div class="actions-primary">
+                                        <?php if ($product->isSaleable()) { ?>
+                                            <?php if ($product->getTypeInstance()->hasRequiredOptions($product)) {?>
+                                                <button class="action tocart primary"
+                                                        data-mage-init='{"redirectUrl":{"url":"<?php echo $viewModel->getProductUrl($product) ?>"}}'
+                                                        type="button"
+                                                        title="<?php echo __('Add to Cart') ?>">
+                                                    <span>
+                                                        <?= $viewModel->getEscaper()->escapeHtmlAttr(__('Add to Cart')) ?>
+                                                    </span>
+                                                </button>
+
+                                                <?php echo $this->getChildHtml('addto') ?>
+
+                                            <?php } else { ?>
+                                                <button class="action tocart primary"
+                                                        data-post='<?php echo $viewModel->getPreparedPostData($product); ?>'
+                                                        type="button"
+                                                        title="<?php echo __('Add to Cart') ?>">
+                                                    <span>
+                                                        <?= $viewModel->getEscaper()->escapeHtmlAttr(__('Add to Cart')) ?>
+                                                    </span>
+                                                </button>
+
+                                                <?php echo $this->getChildHtml('addto') ?>
+
+                                            <?php } ?>
+                                        <?php } else { ?>
+                                            <?php if ($product->getIsSalable()) { ?>
+                                                <div class="stock available"><span><?php echo __('In stock') ?></span>
+                                                </div>
+                                            <?php } else {
+                                                ?>
+                                                <div class="stock unavailable">
+                                                    <span><?php echo __('Out of stock') ?></span></div>
+                                            <?php } ?>
+                                        <?php } ?>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <?php echo ($iterator == $iteratorTotal + 1) ? '</li>' : '' ?>
+                        <?php if ($iterator == $iteratorTotal + 1) {
+                            break;
+                        }
+                    } ?>
+                </ol>
+            </div>
+        </div>
+ <?php } ?>
+
+
+test

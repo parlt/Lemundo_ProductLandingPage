@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface" type="Lemundo\ProductLandingPage\Repository\ProductLandingPageRepository"/>
+    <preference for="Lemundo\ProductLandingPage\Api\ProductDetailBySkuServiceInterface" type="Lemundo\ProductLandingPage\Service\ProductDetailBySkuService"/>
+    <preference for="Lemundo\ProductLandingPage\Api\ProductsByCategoryIdServiceInterface" type="Lemundo\ProductLandingPage\Service\ProductsByCategoryIdService"/>
+    <preference for="Lemundo\ProductLandingPage\Api\ProductsByUrlPathServiceInterface" type="Lemundo\ProductLandingPage\Service\ProductsByUrlPathService"/>
+    <preference for="Lemundo\ProductLandingPage\Api\ProductsServiceInterface" type="Lemundo\ProductLandingPage\Service\ProductsService"/>
+    <preference for="Lemundo\ProductLandingPage\Api\GetProductCollectionServiceInterface" type="Lemundo\ProductLandingPage\Service\GetProductCollectionService"/>
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="Lemundo_ProductLandingPage_GetProductDetailBySku" xsi:type="object">Lemundo\ProductLandingPage\Console\Command\GetProductDetailBySku</item>
+                <item name="Lemundo_ProductLandingPage_GetProductsListingByCategoryId" xsi:type="object">Lemundo\ProductLandingPage\Console\Command\GetProductsListingByCategoryId</item>
+                <item name="Lemundo_ProductLandingPage_GetProductsListing" xsi:type="object">Lemundo\ProductLandingPage\Console\Command\GetProductsListing</item>
+                <item name="Lemundo_ProductLandingPage_GetProductsListingByUrlPath" xsi:type="object">Lemundo\ProductLandingPage\Console\Command\GetProductsListingByUrlPath</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Lemundo\ProductLandingPage\Console\Command\GetProductDetailBySku">
+        <arguments>
+            <argument name="productLandingPageRepository" xsi:type="object">Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface\Proxy</argument>
+        </arguments>
+    </type>
+    <type name="Lemundo\ProductLandingPage\Console\Command\GetProductsListingByCategoryId">
+        <arguments>
+            <argument name="productLandingPageRepository" xsi:type="object">Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface\Proxy</argument>
+        </arguments>
+    </type>
+    <type name="Lemundo\ProductLandingPage\Console\Command\GetProductsListing">
+        <arguments>
+            <argument name="productLandingPageRepository" xsi:type="object">Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface\Proxy</argument>
+        </arguments>
+    </type>
+    <type name="Lemundo\ProductLandingPage\Console\Command\GetProductsListingByUrlPath">
+        <arguments>
+            <argument name="productLandingPageRepository" xsi:type="object">Lemundo\ProductLandingPage\Api\ProductLandingPageRepositoryInterface\Proxy</argument>
+        </arguments>
+    </type>
+</config>
