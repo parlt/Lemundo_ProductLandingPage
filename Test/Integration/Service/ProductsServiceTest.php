@@ -70,8 +70,7 @@ class ProductsServiceTest extends TestCase
         ?string $sortOrder = null,
         ?int $pageSize = null,
         ?int $currentPage = null
-    ): void
-    {
+    ): void {
         $this->result = $this->productsService->execute($storeId, $sortField, $sortOrder, $pageSize, $currentPage);
     }
 
